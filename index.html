@@ -11,17 +11,42 @@
     <header>
         <nav>
             <h1>foods</h1>
-            <ul>
-                <li>home</li>
-                <li>about</li>
-                <li>menu</li>
-                <li>service</li>
-                <li>contact</li>
+            <ul class="nav__listComplete">
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">service</a></li>
+                <li><a href="#">contact</a></li>
             </ul>
+
+            <i class='bx bx-menu' id="btnMenuDes"></i>
         </nav>
     </header>
+    <div id="menuDesplegable" class="ocultarNav">
+        <ul class="nav__listSmartphone">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
     <main>
-        
+        <article class="main__index">
+            <section class="index__info">
+                <h1>full website</h1>
+                <div class="info__text">
+                    <p>Food the</p>
+                    <p>Most precious thing</p>
+                </div>
+                <button>today's menu</button>
+            </section>
+            <section class="index__img">
+                <img src="storage/img/home.png" alt="">
+            </section>
+        </article>
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
