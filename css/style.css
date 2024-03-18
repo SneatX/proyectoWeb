@@ -1,1 +1,42 @@
 @import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-three);
+}
+
+/*NAV*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+nav h1{
+    color: var(--color-one);
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-left: 5vw;
+}
+
+nav ul{
+    color: var(--color-two);
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
+    display: flex;
+    margin-right: 5vw;
+}
+
+nav ul > li{
+    padding: 5px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
