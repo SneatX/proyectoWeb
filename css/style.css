@@ -17,9 +17,9 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     position: fixed;
     width: 100vw;
+    height: 10vh;
     top: 0;
     background-color: var(--color-three);
 
@@ -40,7 +40,7 @@ nav h1{
 
 #menuDesplegable{
     position: fixed;
-    top: 80px;
+    top: 8vh;
     background-color: var(--color-six);
     width: 100%;
 }
@@ -150,6 +150,7 @@ nav h1{
 @media (max-width: 700px){
     .main__index{
         flex-wrap: wrap;
+        align-items: flex-end;
     }
 
     .nav__listComplete{
@@ -161,9 +162,11 @@ nav h1{
 
     .index__info{
         width: 100vw;
+        height: 50vh;
+        padding-top: 10vh;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
     }
     .index__info >*{
@@ -179,6 +182,7 @@ nav h1{
 
     .index__img{
         width: 100vw;
+        height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
