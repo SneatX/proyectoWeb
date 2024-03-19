@@ -224,6 +224,7 @@ nav h1{
 .menu__text h4{
     color: var(--color-one);
     font-size: 2em;
+    text-transform: capitalize;
 }
 .menu__text h2{
     color: var(--color-two);
@@ -239,7 +240,7 @@ nav h1{
     width: 70%;
     z-index: -10;
     align-self: center;
-    padding-top: 10vh;
+    padding-top: 15vh;
 }
 
 .products__item{
@@ -251,6 +252,7 @@ nav h1{
     text-align: center;
     gap: 5px;
     padding: 30px;
+    text-transform: capitalize;
 }
 
 .products__item i{
@@ -270,13 +272,83 @@ nav h1{
 
 .products__item h4{
     font-size: 1.5em;
+    font-weight: 1;
 }
 
 .products__item h5{
     font-size: 1em;
     color: var(--color-one);
+    font-weight: 1;
 }
 /*Fin - Pagina 3 - Menu*/
+
+/*Pagina 4 - Services*/
+.main__services{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__text{
+    margin-top: 10vh;
+    height: 10vh;
+    text-align: center;
+    padding: 0 30px ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.services__text h4{
+    color: var(--color-one);
+    font-size: 2em;
+    text-transform: capitalize;
+}
+.services__text h2{
+    color: var(--color-two);
+    font-size: 4em;
+}
+
+.services__container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    width: 70%;
+    z-index: -10;
+    align-self: center;
+    padding-top: 10vh;
+}
+
+.container__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    text-transform: capitalize;
+}
+
+.container__item div{
+    width: 100%;
+}
+.container__item div img{
+    width: 100%;
+}
+
+.container__item h3{
+    color: var(--color-one);
+    font-size: 2.7em;
+    margin-bottom: 20px;
+}
+
+.container__item h4{
+    font-size: 1.6em;
+    color: var(--color-two);
+    font-weight: 1;
+}
+/*Fin - Pagina 4 - services*/
 
 
 
@@ -418,4 +490,49 @@ nav h1{
         font-size: 1em;
     }
     /*Fin - Pagina 3 - Menu*/
+
+    /*Pagina 4 - Services*/
+    .main__services{
+        height: auto;
+    }
+
+    .services__text h4{
+        font-size: 1.5em;
+    }
+    .services__text h2{
+        font-size: 2em;
+    }
+
+    .services__container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        width: 70%;
+        z-index: -10;
+        align-self: center;
+        padding-top: 10vh;
+    }
+
+    .container__item{
+        gap: 5px;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .container__item img{
+        width: 70%;
+    }
+
+    .container__item h3{
+        font-size: 2em;
+    }
+
+    .container__item h4{
+        font-size: 1.2em;
+    }
+
+    .container__item h5{
+        font-size: 1em;
+    }
+    /*Fin - Pagina 4 - Services*/
 }
