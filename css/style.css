@@ -122,10 +122,9 @@ nav h1{
 }
 
 .index__info button{
-    width:160px;
-    height: 40px;
     border: 0;
-    margin: 30px 0;
+    margin: 15px 0;
+    padding: 10px 25px;
     color: var(--color-two);
     background: var(--color-one);
     text-transform: capitalize;
@@ -145,9 +144,81 @@ nav h1{
     width: 100%;
 }
 
+/*Fin - Pagina 1 - INDEX*/
+
+/*Pagina 2 - AboutUs*/
+.main__aboutUs{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .35fr repeat(2, 1fr) .35fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    ". img text .";
+    align-items: end;
+    grid-gap: 5vw;
+}
+
+.aboutUs__img{
+    grid-area: img;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutUs__img img{
+    width: 100%;
+}
+
+.aboutUs__text{
+    gap: 1vw;
+    grid-area: text;
+    height: 90vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.aboutUs__text h4{
+    color: var(--color-one);
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+.aboutUs__text h2{
+    color: var(--color-two);
+    font-size: 3.3em;
+}
+
+.aboutUs__text p{
+    color: var(--color-two);
+    font-size: 1.5em;
+}
+
+.aboutUs__text button{
+    border: 0;
+    margin: 15px 0;
+    padding: 10px 25px;
+    color: var(--color-two);
+    background: var(--color-one);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 700px){
+    /*Menu desplegable*/
     .main__index{
         flex-wrap: wrap;
         align-items: flex-end;
@@ -159,6 +230,9 @@ nav h1{
     #btnMenuDes{
         display: block;
     }
+    /*Fin desplegable*/
+
+    /*Pagina 1 - INDEX*/
 
     .index__info{
         width: 100vw;
@@ -190,5 +264,7 @@ nav h1{
     .index__img img{
         width: 80%;
     }
+    /*Fin - Pagina 1 - INDEX*/
+    /*Pagina 2 - AboutUs*/
     
 }
