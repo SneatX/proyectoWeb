@@ -205,8 +205,78 @@ nav h1{
     font-weight: bold;
     font-size: 1.25em;
 }
+/*Fin - Pagina 2 - AboutUs*/
 
+/*Pagina 3 - MENU*/
+.main__menu{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.menu__text{
+    margin-top: 10vh;
+    height: 10vh;
+    text-align: center;
+    padding: 0 30px ;
+}
+.menu__text h4{
+    color: var(--color-one);
+    font-size: 2em;
+}
+.menu__text h2{
+    color: var(--color-two);
+    font-size: 4em;
+}
+
+.menu__products{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    width: 70%;
+    z-index: -10;
+    align-self: center;
+    padding-top: 10vh;
+}
+
+.products__item{
+    background-color: var(--color-five);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    padding: 30px;
+}
+
+.products__item i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--color-one);
+}
+
+.products__item img{
+    width: 70%;
+}
+
+.products__item h3{
+    font-size: 2em;
+}
+
+.products__item h4{
+    font-size: 1.5em;
+}
+
+.products__item h5{
+    font-size: 1em;
+    color: var(--color-one);
+}
+/*Fin - Pagina 3 - Menu*/
 
 
 
@@ -281,7 +351,7 @@ nav h1{
     }
 
     .aboutUs__img img{
-        width: 80%;
+        width: 60%;
     }
  
     .aboutUs__text{
@@ -305,4 +375,47 @@ nav h1{
         color: var(--color-two);
         font-size: 1em;
     }
+
+    /*Pagina 3 - MENU*/
+    .main__menu{
+        height: auto;
+    }
+
+    .menu__text h4{
+        font-size: 1.5em;
+    }
+    .menu__text h2{
+        font-size: 2em;
+    }
+
+    .menu__products{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 20px;
+        width: 70%;
+        z-index: -10;
+        align-self: center;
+        padding-top: 10vh;
+    }
+
+    .products__item{
+        gap: 5px;
+    }
+
+    .products__item img{
+        width: 70%;
+    }
+
+    .products__item h3{
+        font-size: 1.5em;
+    }
+
+    .products__item h4{
+        font-size: 1.2em;
+    }
+
+    .products__item h5{
+        font-size: 1em;
+    }
+    /*Fin - Pagina 3 - Menu*/
 }
