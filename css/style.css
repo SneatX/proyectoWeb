@@ -266,5 +266,43 @@ nav h1{
     }
     /*Fin - Pagina 1 - INDEX*/
     /*Pagina 2 - AboutUs*/
+
+    .main__aboutUs{
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 1fr 1fr;
+        grid-template-areas: 
+        "."
+        "text"
+        "img";
+    }
+
+    .aboutUs__img{
+        height: 45vh;
+    }
+
+    .aboutUs__img img{
+        width: 80%;
+    }
+ 
+    .aboutUs__text{
+        height: 45vh;
+        align-items: end;
+        padding: 40px 30px 0 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutUs__text h4{
+        font-size: 1.5em;
+    }
     
+    .aboutUs__text h2{
+        color: var(--color-two);
+        font-size: 2.5em;
+    }
+    
+    .aboutUs__text p{
+        color: var(--color-two);
+        font-size: 1em;
+    }
 }
