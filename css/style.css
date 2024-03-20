@@ -8,12 +8,26 @@
     font-family: "Gugi", sans-serif;
 }
 
+body{
+    height: 100vh;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+}
+
 nav{
     position: relative;
 }
 
+.nav__pc{
+    display: none;
+}
+
 .nav__title{
-    position: fixed;
+    position: sticky;
     top: 0;
     height: 50px;
     width: 100%;
@@ -70,4 +84,85 @@ nav{
     width: 100%;
     text-align: center;
     text-decoration: none;
+}
+
+@media (min-width: 768px){
+    body{
+        background: url(../storage/img/fondo.png);
+        background-size: cover;
+        background-position: center center;
+    }
+    .nav__movile{
+        display: none;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 300px 3fr;
+        grid-template-rows: 1fr;
+        height: 100%;
+        padding: 2vw;
+    }
+    .nav__pc{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3em;
+    }
+    .nav__pc > *{
+        margin-bottom: 50px;
+        color: var(--color-three);
+    }
+    
+    .pc__title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: var(--color-three);
+    }
+
+    .pc__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .pc__list li{
+        display: flex;
+    }
+    .pc__list li a{
+        padding: 1em;
+        text-decoration: none;
+        color: var(--color-three);
+        padding-right: 187px;
+    }
+
+    .pc__carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        color: var(--color-three);
+        font-size: 5em
+    }
+
+    .nav__pc p{
+        display: flex;
+        justify-content: center;
+    }
+
+    .paginaElegida{
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        background-color: #ffffff2a;
+    }
+
+    .main__products{
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        border-radius: 50px;
+    }
+
+
 }
