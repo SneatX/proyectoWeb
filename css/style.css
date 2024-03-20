@@ -1,1 +1,73 @@
 @import url(variables.css);
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Zen+Dots&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Gugi", sans-serif;
+}
+
+nav{
+    position: relative;
+}
+
+.nav__title{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-three);
+    background: var(--color-one);
+    font-family: "Zen Dots", sans-serif;
+}
+
+.nav__title .bx-menu{
+    position: absolute;
+    left: 10px;
+    font-size: 2em
+}
+.nav__title .bx-cart-alt{
+    position: absolute;
+    right: 10px;
+    font-size: 2em
+}
+
+.nav__menuDesplegable{
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
+    background-color: red;
+}
+
+.nav__menuDesplegable ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-one);
+    gap: 0;
+}
+
+.nav__menuDesplegable li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: var(--color-three);
+}
+.nav__menuDesplegable li:active{
+    background-color: var(--color-two);
+}
+
+.nav__menuDesplegable li a{
+    color: var(--color-three);
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
