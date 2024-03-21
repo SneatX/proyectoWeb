@@ -18,10 +18,10 @@
                 </div>
                 <div class="nav__menuDesplegable" id="menuDesplegable">
                     <ul>
-                        <li><a href="#">Todos</a></li>
-                        <li><a href="#">Abrigos</a></li>
-                        <li><a href="#">Camisetas</a>   </li>
-                        <li><a href="#">Pantalones</a></li>
+                        <li><a href="#" id="mostrarTodos">Todos</a></li>
+                        <li><a href="#" id="mostrarAbrigos">Abrigos</a></li>
+                        <li><a href="#" id="mostrarCamisas">Camisetas</a>   </li>
+                        <li><a href="#" id="mostrarPantalones">Pantalones</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,10 +31,10 @@
                     <h1>CampusShop</h1>
                 </div>
                 <ul class="pc__list">
-                    <li><a href="#" class="paginaElegida">Todos</a></li>
-                    <li><a href="#">Abrigos</a></li>
-                    <li><a href="#">Camisetas</a></li>
-                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#" id="mostrarTodosPc" class="paginaElegida">Todos</a></li>
+                    <li><a href="#" id="mostrarAbrigosPc">Abrigos</a></li>
+                    <li><a href="#" id="mostrarCamisasPc">Camisetas</a></li>
+                    <li><a href="#" id="mostrarPantalonesPc">Pantalones</a></li>
                 </ul>
                 <div class="pc__carrito">
                     <i class='bx bx-cart-alt'></i>
@@ -44,11 +44,155 @@
         </nav>
 
         <article class="main__products">
-            <section></section>
+            <section class="products__item camisa">
+                <div class="item__img">
+                    <img src="storage/img/camisa1.png">
+                </div>
+                <div class="item__info">
+                    <h2>Camisa negra</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item abrigo">
+                <div class="item__img">
+                    <img src="storage/img/abrigo1.png">
+                </div>
+                <div class="item__info">
+                    <h2>Abrigo verde</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item pantalon">
+                <div class="item__img">
+                    <img src="storage/img/pantalon1.png">
+                </div>
+                <div class="item__info">
+                    <h2>Jean azul</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item camisa">
+                <div class="item__img">
+                    <img src="storage/img/camisa4.png">
+                </div>
+                <div class="item__info">
+                    <h2>Camiseta pro</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item camisa">
+                <div class="item__img">
+                    <img src="storage/img/camisa2.webp">
+                </div>
+                <div class="item__info">
+                    <h2>Camisa roja</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item abrigo">
+                <div class="item__img">
+                    <img src="storage/img/abrigo2.png">
+                </div>
+                <div class="item__info">
+                    <h2>Abrigo dama</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item pantalon">
+                <div class="item__img">
+                    <img src="storage/img/pantalon2.webp">
+                </div>
+                <div class="item__info">
+                    <h2>Pantalon negro dama</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item camisa">
+                <div class="item__img">
+                    <img src="storage/img/camisa3.png">
+                </div>
+                <div class="item__info">
+                    <h2>Camisa negra hombre</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item pantalon">
+                <div class="item__img">
+                    <img src="storage/img/pantalon3.png">
+                </div>
+                <div class="item__info">
+                    <h2>Pantalon negro dama</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item abrigo">
+                <div class="item__img">
+                    <img src="storage/img/abrigo4.png">
+                </div>
+                <div class="item__info">
+                    <h2>Abrigo de rayas</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item pantalon">
+                <div class="item__img">
+                    <img src="storage/img/pantalon4.png">
+                </div>
+                <div class="item__info">
+                    <h2>Sudadera unisex beige</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="products__item abrigo">
+                <div class="item__img">
+                    <img src="storage/img/abrigo3.png">
+                </div>
+                <div class="item__info">
+                    <h2>Abrigo unisex</h2>
+                    <div class="info__add">
+                        <h2>$ 2.000</h2>
+                        <button>Agregar</button>
+                    </div>
+                </div>
+            </section>
         </article>
+        
     </main>
 
     
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>

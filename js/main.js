@@ -1,12 +1,34 @@
-let btnDesplegar = document.getElementById('btnDesplegarMenu')
-let menuMovile = document.getElementById('menuDesplegable')
+import { desplegarBarra } from "./modules/navBar.js";
+import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones , quitarSubrrayado} from "./modules/filtrarElementos.js";
 
-btnDesplegar.addEventListener('click', (e)=>{
+const btnDesplegar = document.getElementById('btnDesplegarMenu');
+btnDesplegar.addEventListener('click', desplegarBarra);
 
-    if(menuMovile.style.height === "0px" || !menuMovile.style.height){
-        menuMovile.style.height = '160px'
-    }
-    else{
-        menuMovile.style.height = '0px'
-    }
+
+const btnMostrarTodos = document.getElementById("mostrarTodosPc")
+btnMostrarTodos.addEventListener("click" , e =>{
+    mostrarTodos()
+    quitarSubrrayado()
+    btnMostrarTodos.classList.add("paginaElegida")
+})
+
+const btnMostrarAbrigos = document.getElementById("mostrarAbrigosPc")
+btnMostrarAbrigos.addEventListener("click" , e =>{
+    mostrarAbrigos()
+    quitarSubrrayado()
+    btnMostrarAbrigos.classList.add("paginaElegida")
+})
+
+const btnMostrarCamisas = document.getElementById("mostrarCamisasPc")
+btnMostrarCamisas.addEventListener("click" , e =>{
+    mostrarCamisetas()
+    quitarSubrrayado()
+    btnMostrarCamisas.classList.add("paginaElegida")
+})
+
+const btnMostrarPantalones = document.getElementById("mostrarPantalonesPc")
+btnMostrarPantalones.addEventListener("click" , e =>{
+    mostrarPantalones()
+    quitarSubrrayado()
+    btnMostrarPantalones.classList.add("paginaElegida")
 })
