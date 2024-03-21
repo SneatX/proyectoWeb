@@ -131,7 +131,7 @@ nav{
         padding: 1em;
         text-decoration: none;
         color: var(--color-three);
-        padding-right: 187px;
+        padding-right: 188px;
     }
 
     .pc__carrito{
@@ -161,6 +161,7 @@ nav{
     .nav__pc p{
         display: flex;
         justify-content: center;
+        margin-bottom: 0;
     }
 
     .paginaElegida{
@@ -353,4 +354,51 @@ nav{
         cursor: pointer;
     }
 
+    .mainCarrito__total{
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .mainCarrito__total button{
+        border: 0;
+        height: 50px;
+        width: 230px;
+        border-radius: 5px;
+        font-size: 1.5em;
+    }
+    .mainCarrito__total  > button:hover{
+        cursor: pointer;
+        background-color: var(--color-two);
+    }
+
+    .total__comprar{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        background-color: var(--color-two);
+    }
+
+    .comprar__precio{
+        color: var(--color-three);
+    }
+
+    .btnComprar:hover{
+        background-color: var(--color-one);
+        color: var(--color-three);
+        cursor: pointer;
+    }
+
+    .carritoVacio{
+        display: none;
+    }
+    .carritoVacio p{
+        padding-top: 200px;
+        font-size: 3em;
+        text-align: center;
+    }
 }

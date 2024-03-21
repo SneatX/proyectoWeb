@@ -18,10 +18,10 @@
                 </div>
                 <div class="nav__menuDesplegable" id="menuDesplegable">
                     <ul>
-                        <li><a href="#" id="mostrarTodos">Todos</a></li>
-                        <li><a href="#" id="mostrarAbrigos">Abrigos</a></li>
-                        <li><a href="#" id="mostrarCamisas">Camisetas</a>   </li>
-                        <li><a href="#" id="mostrarPantalones">Pantalones</a></li>
+                        <li><a href="#" id="mostrarTodosMov">Todos</a></li>
+                        <li><a href="#" id="mostrarAbrigosMov">Abrigos</a></li>
+                        <li><a href="#" id="mostrarCamisasMov">Camisetas</a>   </li>
+                        <li><a href="#" id="mostrarPantalonesMov">Pantalones</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     <div class="item__info">
                         <h2>Camiseta pro</h2>
                         <div class="info__add">
-                            <h2>$ 2.000</h2>
+                            <h2>$ 4.000</h2>
                             <button>Agregar</button>
                         </div>
                     </div>
@@ -197,6 +197,11 @@
         <div class="container__mainCarrito">
             <h1>Carrito</h1>
             <article class="main__carrito">
+
+                <section class="carritoVacio">
+                    <p>El carrito esta vacio :c</p>
+                </section>
+
                 <section class="carrito__item">
                     <div class="item__imgCarrito">
                         <img src="storage/img/camisa1.png">
@@ -295,7 +300,18 @@
                         <i class='bx bxs-trash'></i>
                     </div>
                 </section>
+
             </article>
+            <div class="mainCarrito__total">
+                <button id="btnVaciarCarrito">Vaciar Carrito</button>
+                <div class="total__comprar">
+                    <div class="comprar__precio">
+                        <h2>Total</h2>
+                        <h2>$ 16.000</h2>
+                    </div>
+                    <button class="btnComprar">Comprar Ahora</button>
+                </div>
+            </div>
         </div>
     </main>
 

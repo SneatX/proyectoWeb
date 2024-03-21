@@ -1,5 +1,5 @@
 import { desplegarBarra } from "./modules/navBar.js";
-import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones , quitarSubrrayado} from "./modules/filtrarElementos.js";
+import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones , quitarSubrrayado} from "./modules/filtrarElementosPc.js";
 
 const btnDesplegar = document.getElementById('btnDesplegarMenu');
 btnDesplegar.addEventListener('click', desplegarBarra);
@@ -13,6 +13,8 @@ btnMostrarTodos.addEventListener("click" , e =>{
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Todos los productos"
 })
 
 const btnMostrarAbrigos = document.getElementById("mostrarAbrigosPc")
@@ -23,6 +25,8 @@ btnMostrarAbrigos.addEventListener("click" , e =>{
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Abrigos"
 })
 
 const btnMostrarCamisas = document.getElementById("mostrarCamisasPc")
@@ -33,6 +37,8 @@ btnMostrarCamisas.addEventListener("click" , e =>{
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Camisas"
 })
 
 const btnMostrarPantalones = document.getElementById("mostrarPantalonesPc")
@@ -43,6 +49,8 @@ btnMostrarPantalones.addEventListener("click" , e =>{
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Pantalones"
 })
 
 const btnCarrito = document.getElementById("btnCarrito")
@@ -53,4 +61,14 @@ btnCarrito.addEventListener("click" , e=>{
 
     document.querySelector(".container__main").style.display ="none"
     document.querySelector(".container__mainCarrito").style.display ="block"
+})
+
+
+const btnVaciarCarrito = document.getElementById("btnVaciarCarrito")
+btnVaciarCarrito.addEventListener("click" , e =>{
+    document.querySelectorAll(".carrito__item ,.mainCarrito__total").forEach(element =>{
+        element.style.display = "none"
+    })
+
+    document.querySelector(".carritoVacio").style.display = "block"
 })
