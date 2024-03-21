@@ -400,7 +400,7 @@ nav h1{
 }
 
 .main__contact h3{
-    font-size: 2em;
+    font-size: 1.9vw;
 
 }
 
@@ -415,10 +415,11 @@ nav h1{
 .main__contact a{
     text-decoration: none;
     color: var(--color-two);
+    font-size: 1.5vw;
 }
 
-.main__contact i{
-    font-size: 2.5em;
+.main__contact i{   
+    font-size: 2.4vw;
 }
 
 .main__contact i:hover{
@@ -444,13 +445,6 @@ nav h1{
 }
 
 /*Fin - Pagina 6 - contact*/
-
-
-
-
-
-
-
 
 
 
@@ -632,72 +626,76 @@ nav h1{
     /*Fin - Pagina 4 - Services*/
 
     /*Pagina 5 - Quiality*/
-.main__quality{
-    height: 100vh;
-}
-.quality__content{
-    width: 85vw;
-    height: 40vh;
-}
+    .main__quality{
+        height: 100vh;
+    }
+    .quality__content{
+        width: 85vw;
+        height: 40vh;
+    }
 
-.quality__content h2{
-    font-size: 2em;
-}
+    .quality__content h2{
+        font-size: 2em;
+    }
 
-.quality__content button{
-    border: 0;
-    margin: 15px 0;
-    padding: 10px 25px;
-    color: var(--color-two);
-    background: var(--color-one);
-    text-transform: capitalize;
-    font-weight: bold;
-    font-size: 1.25em;
-    cursor: pointer;
-}
-/*Fin - Pagina 5 - Quiality*/
-/*Pagina 6 - contact*/
+    .quality__content button{
+        border: 0;
+        margin: 15px 0;
+        padding: 10px 25px;
+        color: var(--color-two);
+        background: var(--color-one);
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: 1.25em;
+        cursor: pointer;
+    }
+    /*Fin - Pagina 5 - Quiality*/
+    /*Pagina 6 - contact*/
 
-.main__contact{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-bottom: 10vh;
-    padding: 0 10vw;
-    color: var(--color-two);
-    text-transform: capitalize;
-    margin-bottom: 3vh;
-}
+    .main__contact{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 10vh;
+        padding: 0 10vw;
+        color: var(--color-two);
+        text-transform: capitalize;
+        margin-bottom: 3vh;
+    }
 
-.main__contact >*{
-    margin-bottom: 20px;
-}
+    .main__contact >*{
+        margin-bottom: 20px;
+    }
 
-.main__contact a{
-    text-decoration: none;
-    color: var(--color-two);
-}
+    .main__contact a{
+        text-decoration: none;
+        color: var(--color-two);
+        font-size: 1em;
+    }
 
-.main__contact h3{
-    font-size: 1.5em;
+    .main__contact h3{
+        font-size: 1.5em;
 
-}
-.main__contact li{
-    margin-bottom: 5px;
-    font-size: 1em;
-}
+    }
+    .main__contact li{
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    .main__contact i{
+        font-size: 1.9em;
+    }
 
-.contact__socialMedia{
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .contact__socialMedia{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.linea_social{
-    align-self: flex-start;
-    margin-left: 25px;
-}
+    .linea_social{
+        align-self: flex-start;
+        margin-left: 25px;
+    }
 
-/*Fin - Pagina 6 - contact*/
+    /*Fin - Pagina 6 - contact*/
 }
