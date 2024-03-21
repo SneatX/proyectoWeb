@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <main>
         <nav>
@@ -14,18 +16,17 @@
                 <div class="nav__title">
                     <h1>CampusShop</h1>
                     <i class='bx bx-menu' id="btnDesplegarMenu"></i>
-                    <i class='bx bx-cart-alt'></i>
+                    <i class='bx bx-cart-alt' id="btnCarritoMov"></i>
                 </div>
                 <div class="nav__menuDesplegable" id="menuDesplegable">
                     <ul>
                         <li><a href="#" id="mostrarTodosMov">Todos</a></li>
                         <li><a href="#" id="mostrarAbrigosMov">Abrigos</a></li>
-                        <li><a href="#" id="mostrarCamisasMov">Camisetas</a>   </li>
+                        <li><a href="#" id="mostrarCamisasMov">Camisetas</a> </li>
                         <li><a href="#" id="mostrarPantalonesMov">Pantalones</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="nav__pc">
                 <div class="pc__title">
                     <h1>CampusShop</h1>
@@ -38,12 +39,11 @@
                 </ul>
                 <div class="pc__carrito">
                     <p id="btnCarrito">Carrito</p>
-                    <div>3</div>
+                    <div>4</div>
                 </div>
                 <p>© 2023 Camper</p>
             </div>
         </nav>
-
         <div class="container__main">
             <h1 id="titleContainers">Todos los productos</h1>
             <article class="main__products">
@@ -97,7 +97,7 @@
                 </section>
                 <section class="products__item camisa">
                     <div class="item__img">
-                        <img src="storage/img/camisa2.webp">
+                        <img src="storage/img/camisa2.png">
                     </div>
                     <div class="item__info">
                         <h2>Camisa roja</h2>
@@ -121,7 +121,7 @@
                 </section>
                 <section class="products__item pantalon">
                     <div class="item__img">
-                        <img src="storage/img/pantalon2.webp">
+                        <img src="storage/img/pantalon2.png">
                     </div>
                     <div class="item__info">
                         <h2>Pantalon negro dama</h2>
@@ -193,15 +193,12 @@
                 </section>
             </article>
         </div>
-
         <div class="container__mainCarrito">
             <h1>Carrito</h1>
             <article class="main__carrito">
-
                 <section class="carritoVacio">
                     <p>El carrito esta vacio :c</p>
                 </section>
-
                 <section class="carrito__item">
                     <div class="item__imgCarrito">
                         <img src="storage/img/camisa1.png">
@@ -226,7 +223,6 @@
                         <i class='bx bxs-trash'></i>
                     </div>
                 </section>
-
                 <section class="carrito__item">
                     <div class="item__imgCarrito">
                         <img src="storage/img/camisa4.png">
@@ -251,7 +247,6 @@
                         <i class='bx bxs-trash'></i>
                     </div>
                 </section>
-
                 <section class="carrito__item">
                     <div class="item__imgCarrito">
                         <img src="storage/img/abrigo1.png">
@@ -276,7 +271,6 @@
                         <i class='bx bxs-trash'></i>
                     </div>
                 </section>
-
                 <section class="carrito__item">
                     <div class="item__imgCarrito">
                         <img src="storage/img/abrigo4.png">
@@ -300,7 +294,6 @@
                         <i class='bx bxs-trash'></i>
                     </div>
                 </section>
-
             </article>
             <div class="mainCarrito__total">
                 <button id="btnVaciarCarrito">Vaciar Carrito</button>
@@ -314,8 +307,7 @@
             </div>
         </div>
     </main>
-
-    
     <script src="js/main.js" type="module"></script>
 </body>
+
 </html>

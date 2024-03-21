@@ -1,15 +1,18 @@
 import { desplegarBarra } from "./modules/navBar.js";
 import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones , quitarSubrrayado} from "./modules/filtrarElementosPc.js";
 
+
+/*Barra desplegable*/
 const btnDesplegar = document.getElementById('btnDesplegarMenu');
 btnDesplegar.addEventListener('click', desplegarBarra);
 
+/*Filtros pc */
 
-const btnMostrarTodos = document.getElementById("mostrarTodosPc")
-btnMostrarTodos.addEventListener("click" , e =>{
+const btnMostrarTodosPc = document.getElementById("mostrarTodosPc")
+btnMostrarTodosPc.addEventListener("click" , e =>{
     mostrarTodos()
     quitarSubrrayado()
-    btnMostrarTodos.classList.add("paginaElegida")
+    btnMostrarTodosPc.classList.add("paginaElegida")
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
@@ -17,11 +20,11 @@ btnMostrarTodos.addEventListener("click" , e =>{
     document.getElementById("titleContainers").textContent = "Todos los productos"
 })
 
-const btnMostrarAbrigos = document.getElementById("mostrarAbrigosPc")
-btnMostrarAbrigos.addEventListener("click" , e =>{
+const btnMostrarAbrigosPc = document.getElementById("mostrarAbrigosPc")
+btnMostrarAbrigosPc.addEventListener("click" , e =>{
     mostrarAbrigos()
     quitarSubrrayado()
-    btnMostrarAbrigos.classList.add("paginaElegida")
+    btnMostrarAbrigosPc.classList.add("paginaElegida")
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
@@ -29,11 +32,11 @@ btnMostrarAbrigos.addEventListener("click" , e =>{
     document.getElementById("titleContainers").textContent = "Abrigos"
 })
 
-const btnMostrarCamisas = document.getElementById("mostrarCamisasPc")
-btnMostrarCamisas.addEventListener("click" , e =>{
+const btnMostrarCamisasPc = document.getElementById("mostrarCamisasPc")
+btnMostrarCamisasPc.addEventListener("click" , e =>{
     mostrarCamisetas()
     quitarSubrrayado()
-    btnMostrarCamisas.classList.add("paginaElegida")
+    btnMostrarCamisasPc.classList.add("paginaElegida")
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
@@ -41,11 +44,11 @@ btnMostrarCamisas.addEventListener("click" , e =>{
     document.getElementById("titleContainers").textContent = "Camisas"
 })
 
-const btnMostrarPantalones = document.getElementById("mostrarPantalonesPc")
-btnMostrarPantalones.addEventListener("click" , e =>{
+const btnMostrarPantalonesPc = document.getElementById("mostrarPantalonesPc")
+btnMostrarPantalonesPc.addEventListener("click" , e =>{
     mostrarPantalones()
     quitarSubrrayado()
-    btnMostrarPantalones.classList.add("paginaElegida")
+    btnMostrarPantalonesPc.classList.add("paginaElegida")
 
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
@@ -53,10 +56,10 @@ btnMostrarPantalones.addEventListener("click" , e =>{
     document.getElementById("titleContainers").textContent = "Pantalones"
 })
 
-const btnCarrito = document.getElementById("btnCarrito")
-btnCarrito.addEventListener("click" , e=>{
+const btnCarritoPc = document.getElementById("btnCarrito")
+btnCarritoPc.addEventListener("click" , e=>{
     quitarSubrrayado()
-    btnCarrito.classList.add("paginaElegida")
+    btnCarritoPc.classList.add("paginaElegida")
     mostrarTodos()
 
     document.querySelector(".container__main").style.display ="none"
@@ -64,8 +67,79 @@ btnCarrito.addEventListener("click" , e=>{
 })
 
 
-const btnVaciarCarrito = document.getElementById("btnVaciarCarrito")
-btnVaciarCarrito.addEventListener("click" , e =>{
+const btnVaciarCarritoPc = document.getElementById("btnVaciarCarrito")
+btnVaciarCarritoPc.addEventListener("click" , e =>{
+    document.querySelectorAll(".carrito__item ,.mainCarrito__total").forEach(element =>{
+        element.style.display = "none"
+    })
+
+    document.querySelector(".carritoVacio").style.display = "block"
+})
+
+
+/*Filtros Movil */
+
+const btnMostrarTodosMov = document.getElementById("mostrarTodosMov")
+btnMostrarTodosMov.addEventListener("click" , e =>{
+    mostrarTodos()
+    quitarSubrrayado()
+    btnMostrarTodosMov.classList.add("paginaElegida")
+
+    document.querySelector(".container__main").style.display ="flex"
+    document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Todos los productos"
+})
+
+const btnMostrarAbrigosMov = document.getElementById("mostrarAbrigosMov")
+btnMostrarAbrigosMov.addEventListener("click" , e =>{
+    mostrarAbrigos()
+    quitarSubrrayado()
+    btnMostrarAbrigosMov.classList.add("paginaElegida")
+
+    document.querySelector(".container__main").style.display ="flex"
+    document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Abrigos"
+})
+
+const btnMostrarCamisasMov = document.getElementById("mostrarCamisasMov")
+btnMostrarCamisasMov.addEventListener("click" , e =>{
+    mostrarCamisetas()
+    quitarSubrrayado()
+    btnMostrarCamisasMov.classList.add("paginaElegida")
+
+    document.querySelector(".container__main").style.display ="flex"
+    document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Camisas"
+})
+
+const btnMostrarPantalonesMov = document.getElementById("mostrarPantalonesMov")
+btnMostrarPantalonesMov.addEventListener("click" , e =>{
+    mostrarPantalones()
+    quitarSubrrayado()
+    btnMostrarPantalonesMov.classList.add("paginaElegida")
+
+    document.querySelector(".container__main").style.display ="flex"
+    document.querySelector(".container__mainCarrito").style.display ="none"
+
+    document.getElementById("titleContainers").textContent = "Pantalones"
+})
+
+const btnCarritoMov = document.getElementById("btnCarritoMov")
+btnCarritoMov.addEventListener("click" , e=>{
+    quitarSubrrayado()
+    btnCarritoMov.classList.add("paginaElegida")
+    mostrarTodos()
+
+    document.querySelector(".container__main").style.display ="none"
+    document.querySelector(".container__mainCarrito").style.display ="block"
+})
+
+
+const btnVaciarCarritoMov = document.getElementById("btnVaciarCarrito")
+btnVaciarCarritoMov.addEventListener("click" , e =>{
     document.querySelectorAll(".carrito__item ,.mainCarrito__total").forEach(element =>{
         element.style.display = "none"
     })
