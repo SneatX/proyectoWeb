@@ -3,6 +3,9 @@ export function quitarSubrrayado(){
     document.getElementById("mostrarAbrigosPc").classList.remove("paginaElegida")
     document.getElementById("mostrarCamisasPc").classList.remove("paginaElegida")
     document.getElementById("mostrarPantalonesPc").classList.remove("paginaElegida")
+    document.getElementById("btnCarrito").classList.remove("paginaElegida")
+
+    
 }
 
 export function mostrarTodos(){

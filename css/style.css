@@ -100,7 +100,7 @@ nav{
         grid-template-columns: 300px 3fr;
         grid-template-rows: 1fr;
         height: 100%;
-        padding: 2vw;
+        padding: 40px;
     }
     .nav__pc{
         display: flex;
@@ -116,8 +116,6 @@ nav{
     
     .pc__title{
         width: 100%;
-        display: flex;
-        justify-content: center;
         color: var(--color-three);
     }
 
@@ -139,10 +137,25 @@ nav{
     .pc__carrito{
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 1vw;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .pc__carrito p{
+        padding: 1em;
+        text-decoration: none;
         color: var(--color-three);
-        font-size: 5em
+        padding-right: 187px;
+    }
+
+    .pc__carrito div{
+        position: absolute;
+        right: 0;
+        background-color: var(--color-three);
+        color: var(--color-one);
+        padding: 10px;
+        border-radius: 7px;
     }
 
     .nav__pc p{
@@ -152,27 +165,42 @@ nav{
 
     .paginaElegida{
         backdrop-filter: blur(10px);
-        border: 1px solid white;
+        outline: 1px solid white;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
         background-color: #ffffff2a;
     }
 
-    .main__products{
+    .container__main{
         backdrop-filter: blur(10px);
         background-color: rgba(128, 128, 128, 0.315);
         border: 5px solid white;
         box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.555);
         border-radius: 30px;
+        overflow-y: scroll;
+    }
+    .container__main h1{
+        font-size: 3em;
+        padding: 30px;
+        text-align: center;
+        color: var(--color-three);
+        text-shadow: 
+        -1px -1px 10px #000000,  
+         1px -1px 10px #000000,
+        -1px  1px 10px #000000,
+         1px  1px 10px #000000;
+    }
+
+    .container__main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main__products{
+
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-template-rows: repeat(auto-fill, 320px);
-        overflow-y: scroll;
         padding: 10px;
-    }
-
-    .main__products::-webkit-scrollbar {
-        display: none;
     }
 
     .products__item{
@@ -240,5 +268,89 @@ nav{
     
     }
 
+    .container__mainCarrito{
+        display: none;
+        backdrop-filter: blur(10px);
+        background-color: rgba(128, 128, 128, 0.315);
+        border: 5px solid white;
+        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.555);
+        border-radius: 30px;
+        overflow-y: scroll;
+    }
+    .container__mainCarrito h1{
+        font-size: 3em;
+        padding: 30px;
+        text-align: center;
+        color: var(--color-three);
+        text-shadow: 
+        -1px -1px 10px #000000,  
+         1px -1px 10px #000000,
+        -1px  1px 10px #000000,
+         1px  1px 10px #000000;
+    }
+    .container__mainCarrito::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main__carrito{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+
+    .carrito__item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: red;
+        border-radius: 30px;
+        border: 2px solid white;
+        background-color: rgba(0, 0, 0, 0.315);
+        margin: 10px;
+        text-transform: capitalize;
+        text-shadow: 
+        -1px -1px 0 white,  
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+         padding: 40px;
+    }
+    .item__imgCarrito{
+        display: flex;
+    }
+    .item__imgCarrito img{
+        width: 100px;
+        max-height: 100px;
+        -webkit-user-drag: none;
+        object-fit:contain;
+    }
+
+    .item__nombreCarrito{
+        font-size: 1.5em;
+        width: 300px;
+    }
+    .item__nombreCarrito h2{
+        word-wrap: break-word;
+    }
+
+    .item__cantidadCarrito, .item__precioCarrito, .item__subTotalCarrito{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .item__cantidadCarrito div{
+        background-color: var(--color-two);
+        border-radius: 5px;
+    }
+
+    .item__eliminarCarrito i{
+        font-size: 5em;
+    }
+
+    .item__eliminarCarrito i:hover{
+        color: red;
+        cursor: pointer;
+    }
 
 }
