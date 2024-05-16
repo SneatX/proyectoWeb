@@ -9,7 +9,7 @@
 }
 
 body {
-    background: url(../storage/img/fondo.png);
+    background: url(../../img/fondo.png);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -126,6 +126,7 @@ nav {
     display: grid;
     grid-template-columns: 82vw;
     grid-template-rows: repeat(auto-fill, 320px);
+    justify-content: center;
     padding: 10px;
 }
 
@@ -355,7 +356,7 @@ nav {
 
 @media (min-width: 985px) {
     body {
-        background: url(../storage/img/fondo.png);
+        background: url(../../img/fondo.png);
         background-size: cover;
         background-position: center center;
         display: block;
@@ -456,7 +457,7 @@ nav {
         width: auto;
         z-index: 100;
         margin: 0;
-        display: block;
+        display: block ;
     }
 
     .container__main h1 {
