@@ -23,7 +23,7 @@ static styles =css`
     }
     .products__item {
         border: 1px solid white;
-        background-color: rgba(0, 0, 0, 0.315);
+        background-color: #fff;
         display: flex;
         flex-direction: column;
         margin: 10px;
@@ -37,7 +37,8 @@ static styles =css`
     .item__img {
         display: flex;
         justify-content: center;
-        width: 1%;
+        width: 100%;
+        height: 70%;
         padding: 5px;
     }
     
@@ -49,21 +50,48 @@ static styles =css`
     .item__info {
         padding: 10px;
         background: var(--color-two);
-        height: 25%;
+        height: 30%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100%;
     }
-    
-    .item__info>h2 {
+
+    .info__title {
+        height: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    .info__title > h2 {
         font-size: 1.3em;
         text-align: center;
         text-shadow:
-            -1px -1px 0 white,
-            1px -1px 0 white,
-            -1px 1px 0 white,
-            1px 1px 0 white;
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+        transition: transform 0s linear;
+    }
+
+    .products__item:hover .info__title > h2 {
+        animation: scrollText 8s linear infinite;
+    }
+
+    @keyframes scrollText {
+        0% {
+        transform: translateX(0);
+        }
+        50% {
+        transform: translateX(-60%);
+        }
+        100% {
+        transform: translateX(0);
+        }
     }
 
     .info__add>h2 {
@@ -75,6 +103,7 @@ static styles =css`
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
+        height: 50%;
         color: white;
     }
     
@@ -99,9 +128,11 @@ static styles =css`
                 <img src="${this.src}" alt="${this.title}">
             </div>
             <div class="item__info">
-                <h2>${this.title}</h2>
+                <div class="info__title" >
+                    <h2>${this.title}</h2>
+                </div>
                 <div class="info__add">
-                    <h2>${this.price}</h2>
+                    <h2>$ ${this.price}</h2>
                     <button @click="${this._AddToCart}">Agregar</button>
                 </div>
             </div>
