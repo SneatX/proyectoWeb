@@ -12,11 +12,11 @@ const btnMostrarTodosPc = document.getElementById("mostrarTodosPc")
 btnMostrarTodosPc.addEventListener("click" , e =>{
     mostrarTodos()
     quitarSubrrayado()
-    btnMostrarTodosPc.classList.add("paginaElegida")
 
+    /*Estilos de los botones al mostrar*/
+    btnMostrarTodosPc.classList.add("paginaElegida")
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
-
     document.getElementById("titleContainers").textContent = "Todos los productos"
 })
 
@@ -24,11 +24,11 @@ const btnMostrarAbrigosPc = document.getElementById("mostrarAbrigosPc")
 btnMostrarAbrigosPc.addEventListener("click" , e =>{
     mostrarAbrigos()
     quitarSubrrayado()
-    btnMostrarAbrigosPc.classList.add("paginaElegida")
 
+    /*Estilos de los botones al mostrar*/
+    btnMostrarAbrigosPc.classList.add("paginaElegida")
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
-
     document.getElementById("titleContainers").textContent = "Abrigos"
 })
 
@@ -36,11 +36,11 @@ const btnMostrarCamisasPc = document.getElementById("mostrarCamisasPc")
 btnMostrarCamisasPc.addEventListener("click" , e =>{
     mostrarCamisetas()
     quitarSubrrayado()
-    btnMostrarCamisasPc.classList.add("paginaElegida")
 
+    /*Estilos de los botones al mostrar*/
+    btnMostrarCamisasPc.classList.add("paginaElegida")
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
-
     document.getElementById("titleContainers").textContent = "Camisas"
 })
 
@@ -48,20 +48,20 @@ const btnMostrarPantalonesPc = document.getElementById("mostrarPantalonesPc")
 btnMostrarPantalonesPc.addEventListener("click" , e =>{
     mostrarPantalones()
     quitarSubrrayado()
-    btnMostrarPantalonesPc.classList.add("paginaElegida")
 
+    /*Estilos de los botones al mostrar*/
+    btnMostrarPantalonesPc.classList.add("paginaElegida")
     document.querySelector(".container__main").style.display ="block"
     document.querySelector(".container__mainCarrito").style.display ="none"
-
     document.getElementById("titleContainers").textContent = "Pantalones"
 })
 
 const btnCarritoPc = document.getElementById("btnCarrito")
 btnCarritoPc.addEventListener("click" , e=>{
+
+    /*Estilos de los botones al mostrar*/
     quitarSubrrayado()
     btnCarritoPc.classList.add("paginaElegida")
-    mostrarTodos()
-
     document.querySelector(".container__main").style.display ="none"
     document.querySelector(".container__mainCarrito").style.display ="block"
 })
@@ -140,9 +140,5 @@ btnCarritoMov.addEventListener("click" , e=>{
 
 const btnVaciarCarritoMov = document.getElementById("btnVaciarCarrito")
 btnVaciarCarritoMov.addEventListener("click" , e =>{
-    document.querySelectorAll(".carrito__item ,.mainCarrito__total").forEach(element =>{
-        element.style.display = "none"
-    })
 
-    document.querySelector(".carritoVacio").style.display = "block"
 })
