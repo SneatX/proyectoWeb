@@ -1,3 +1,7 @@
+import { MyItem } from "../components/my-item"
+
+customElements.define('my-item', MyItem);
+
 export function quitarSubrrayado(){
     document.getElementById("mostrarTodosPc").classList.remove("paginaElegida")
     document.getElementById("mostrarAbrigosPc").classList.remove("paginaElegida")
