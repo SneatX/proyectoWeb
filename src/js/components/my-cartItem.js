@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 
+
 export class MycartItem extends LitElement{
     static properties = {
         src: { type: String },
@@ -176,7 +177,7 @@ export class MycartItem extends LitElement{
             </div>
             <div class="item__precioCarrito">
                 <p>Precio</p>
-                <p>$${this.price}</p>
+                <p>$${this.priceU}</p>
             </div>
             <div class="item__subTotalCarrito">
                 <p>SubTotal</p>

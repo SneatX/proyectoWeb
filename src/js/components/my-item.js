@@ -1,17 +1,22 @@
 import { LitElement, html, css } from "lit"
+import { getAllCarrito } from "../modules/untils/apiService";
 
 export class MyItem extends LitElement{
     static properties = {
         src: { type: String },
         title: { type: String },
-        price: { type: String }
+        price: { type: String },
+        type: {type: String},
+        id: {type: String}
       };
     
       constructor() {
-        super();
-        this.src = '';
-        this.title = '';
-        this.price = '';
+        super()
+        this.src = ''
+        this.title = ''
+        this.price = ''
+        this.type = ""
+        this.id = ""
       }
 
 static styles =css`
@@ -140,9 +145,45 @@ static styles =css`
     }
 
 
-    _AddToCart() {
-        console.log(`${this.title} agregado al carrito`);
-        
+    async _AddToCart() {
+        let carrito = await getAllCarrito()
+        let tipoId
+        if(this.type == "camiseta") tipoId = "camisetaId"
+        if(this.type == "abrigo") tipoId = "abrigoId"
+        if(this.type == "pantalon") tipoId = "pantalonId"
+
+        let bandera = true
+        carrito.forEach(async prendaCarrito => {
+            if(tipoId in prendaCarrito){
+                if(this.id === (prendaCarrito[tipoId]).toString()){
+                    bandera = false
+                    let config = {
+                        method : "PATCH",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "cantidad": prendaCarrito["cantidad"] + 1
+                        })
+                    }
+                    await fetch(`http://localhost:3000/carrito/${prendaCarrito["id"].toString()}`, config)
+                }
+            }
+        });
+        if(bandera){
+            let config = {
+                method : "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    [tipoId] : this.id,
+                    "cantidad": 1
+                })
+            }
+            await fetch(`http://localhost:3000/carrito/`, config)
+        }
+
     }
 
 }

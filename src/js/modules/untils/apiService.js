@@ -17,3 +17,7 @@ export const getAllCarrito = async()=>{
 export const getClotheByCodeAndType = async(id, type)=>{
     return await(await fetch(`http://localhost:3000/${type}?id=${id}`)).json()
 }
+
+export const getClotheById = async(id, tipo) =>{
+    return await(await fetch(`http://localhost:3000/${tipo}/${id}`)).json()
+}

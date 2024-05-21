@@ -16,21 +16,21 @@ export async function mostrarTodos(){
 export async function mostrarAbrigos(){
     let data = await getAllAbrigos()
     data.forEach(articulo => {
-        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}"></my-item>`
+        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}" type="abrigo" id="${articulo.id}"></my-item>`
     });
 }
 
 export async function mostrarCamisetas(){
     let data = await getAllCamisetas()
     data.forEach(articulo => {
-        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}"></my-item>`
+        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}" type="camiseta" id="${articulo.id}"></my-item>`
     });
 }
 
 export async function mostrarPantalones(){
     let data = await getAllPantalones()
     data.forEach(articulo => {
-        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}"></my-item>`
+        articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}" type="pantalon" id="${articulo.id}"></my-item>`
     });
 }
 
