@@ -7,7 +7,8 @@ export class MycartItem extends LitElement{
         title: { type: String },
         cant: { type: String },
         priceU: { type: String },
-        totalPrice: { type: String }
+        totalPrice: { type: String },
+        id: { type: String }
     }
 
     constructor() {
@@ -80,7 +81,7 @@ export class MycartItem extends LitElement{
     }
 
     .item__cantidadCarrito div {
-        background-color: var(--color-two);
+        background-color: #fff;
         border-radius: 5px;
     }
 
@@ -140,7 +141,7 @@ export class MycartItem extends LitElement{
         }
     
         .item__cantidadCarrito div {
-            background-color: var(--color-two);
+            background-color: #fff ;
             border-radius: 5px;
         }
     
@@ -184,10 +185,32 @@ export class MycartItem extends LitElement{
                 <p>$${this.totalPrice}</p>
             </div>
             <div class="item__eliminarCarrito">
-                <i class='bx bxs-trash'></i>
+                <i @click="${this._DeleteToCart}" class='bx bxs-trash'></i>
             </div>
         </section>
         `
+    }
+
+    async _DeleteToCart(){
+        if(this.cant > 1){
+            let config = {
+                method : "PATCH",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "cantidad": this.cant - 1
+                })
+            }
+            await fetch(`http://localhost:3000/carrito/${this.id}`, config)
+            this.cant -=1 //Para que en la pagina se demuestre que se reduce
+        }
+        else{
+            await fetch(`http://localhost:3000/carrito/${this.id}`, {
+                method: "DELETE"
+            })
+            document.getElementById("btnCarrito").click()
+        }
     }
 }
 

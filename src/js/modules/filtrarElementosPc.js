@@ -40,16 +40,16 @@ export async function mostrarCarrito(){
     data.forEach(async articulo =>{
         if("abrigoId" in articulo){
             let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.abrigoId, "abrigo")
-            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}" id="${articulo.id}"></my-cart-item>`
         }
         else if("pantalonId" in articulo){
             let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.pantalonId, "pantalon")
-            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}" id="${articulo.id}"></my-cart-item>`
         }
 
         else if("camisetaId" in articulo){
             let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.camisetaId, "camiseta")
-            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}" id="${articulo.id}"></my-cart-item>`
         }
     })
 }
