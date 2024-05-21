@@ -8,6 +8,7 @@
     font-family: "Gugi", sans-serif;
 }
 
+
 body {
     background: url(../../img/fondo.png);
     background-size: cover;
@@ -93,6 +94,13 @@ nav {
     text-decoration: none;
 }
 
+.container{
+    height: 94vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
 .container__main {
     backdrop-filter: blur(10px);
     background-color: rgba(128, 128, 128, 0.315);
@@ -101,9 +109,8 @@ nav {
     border-radius: 30px;
     margin: 10px;
     width: 95vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    height: 94vh;
+    overflow-y: scroll;
 }
 
 .container__main h1 {
@@ -211,6 +218,7 @@ nav {
     border-radius: 30px;
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 98.5%;
 }
 
 .mainCarrito__title{
@@ -268,6 +276,8 @@ nav {
 
 .item__imgCarrito {
     display: flex;
+    background:#fff;
+    border-radius: 10px;
 }
 
 .item__imgCarrito img {
@@ -312,20 +322,24 @@ nav {
     position: sticky;
     bottom: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     padding: 20px;
 }
 
-.mainCarrito__total button {
+#btnVaciarCarrito {
     border: 0;
     height: 50px;
-    width: 100%;
+    width: 250px;
     border-radius: 5px;
-    font-size: 1.5em;
+    font-size: 1rem;
+    padding: 5px;
 }
 
-.mainCarrito__total>button:hover {
+
+.btnVaciarCarrito:hover {
     cursor: pointer;
     background-color: var(--color-two);
 }
@@ -333,18 +347,27 @@ nav {
 .total__comprar {
     display: flex;
     align-items: center;
-    gap: 30px;
     padding: 10px 30px;
     border-radius: 10px;
     background-color: var(--color-two);
+    width: 290px;
 }
 
 .comprar__precio {
     color: var(--color-three);
     width: 200px;
+    font-size: 1em;
 }
 
-.btnComprar:hover {
+.btnComprar{
+    border: 0;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.btnComprar:hover, #btnVaciarCarrito:hover {
     background-color: var(--color-one);
     color: var(--color-three);
     cursor: pointer;
@@ -368,16 +391,16 @@ nav {
         display: block;
     }
 
-    .nav__movile {
-        display: none;
-    }
-
     main {
         display: grid;
         grid-template-columns: 300px 3fr;
         grid-template-rows: 1fr;
         height: 100%;
-        padding: 40px;
+        padding: 40px 40px 0;
+    }
+
+    .nav__movile {
+        display: none;
     }
 
     .nav__pc {
@@ -391,6 +414,12 @@ nav {
     .nav__pc>* {
         margin-bottom: 50px;
         color: var(--color-three);
+    }
+
+    .container{
+        height: 94vh;
+        width: 100%;
+        display: block;
     }
 
     .pc__title {
@@ -460,10 +489,11 @@ nav {
         box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.555);
         border-radius: 30px;
         overflow-y: scroll;
-        width: auto;
-        z-index: 100;
+        width: 100%;
+        height: 94vh;
+        z-index: 200;
         margin: 0;
-        display: block ;
+        position: relative;
     }
 
     .container__main h1 {
@@ -565,6 +595,7 @@ nav {
         box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.555);
         border-radius: 30px;
         overflow-y: scroll;
+        height: 100%;
     }
 
     .container__mainCarrito h1 {
@@ -580,6 +611,11 @@ nav {
 
     .container__mainCarrito::-webkit-scrollbar {
         display: none;
+    }
+
+    .mainCarrito__content{
+        height: 75vh;
+        overflow-y: scroll;
     }
 
     .main__carrito {
@@ -652,18 +688,7 @@ nav {
         position: sticky;
         bottom: 0;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         padding: 20px;
-    }
-
-    .mainCarrito__total button {
-        border: 0;
-        height: 50px;
-        width: 230px;
-        border-radius: 5px;
-        font-size: 1.5em;
     }
 
     .mainCarrito__total>button:hover {
@@ -682,7 +707,6 @@ nav {
 
     .comprar__precio {
         color: var(--color-three);
-        width: auto;
     }
 
     .btnComprar:hover {

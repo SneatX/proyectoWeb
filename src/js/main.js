@@ -37,3 +37,14 @@ btnVaciarCarritoPc.addEventListener("click" , e =>{
 
 })
 
+const btnCarritoMovil = document.getElementById("btnCarritoMov")
+btnCarritoMovil.addEventListener("click" , e=>{
+    e.preventDefault()
+    limpiarInterfaz()
+
+    /*Estilos de los botones al mostrar*/
+    btnCarritoPc.classList.add("paginaElegida")
+    document.querySelector(".container__main").style.display ="none"
+    document.querySelector(".container__mainCarrito").style.display ="block"
+})
+
