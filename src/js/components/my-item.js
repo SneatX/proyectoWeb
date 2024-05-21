@@ -118,7 +118,6 @@ static styles =css`
         cursor: pointer;
     
     }
-
     `
 
     render() {
