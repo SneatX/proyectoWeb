@@ -440,6 +440,10 @@ nav {
         display: none;
     }
 
+    my-cart-item{
+        width: 100%;
+    }
+
     .main__products {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

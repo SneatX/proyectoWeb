@@ -1,9 +1,11 @@
-import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones} from "../filtrarElementosPc"
+import { mostrarTodos, mostrarAbrigos, mostrarCamisetas, mostrarPantalones, mostrarCarrito} from "../filtrarElementosPc"
 import { limpiarInterfaz } from "./limpiarInterfaz"
 const btnMostrarTodosPc = document.getElementById("mostrarTodosPc")
 const btnMostrarAbrigosPc = document.getElementById("mostrarAbrigosPc")
 const btnMostrarCamisasPc = document.getElementById("mostrarCamisasPc")
 const btnMostrarPantalonesPc = document.getElementById("mostrarPantalonesPc")
+const btnCarritoPc = document.getElementById("btnCarrito")
+
 
 export const filtroElegido = (cod)=>{
     document.querySelector(".container__main").style.display ="block"
@@ -30,5 +32,10 @@ export const filtroElegido = (cod)=>{
             btnMostrarPantalonesPc.classList.add("paginaElegida")
             document.getElementById("titleContainers").textContent = "Pantalones"
             break
+        case "btnCarrito":
+            mostrarCarrito()
+            btnCarritoPc.classList.add("paginaElegida")
+            document.querySelector(".container__main").style.display ="none"
+            document.querySelector(".container__mainCarrito").style.display ="block"
     }
 }

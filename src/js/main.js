@@ -13,37 +13,20 @@ document.addEventListener("DOMContentLoaded" , e =>{
 })
 
 /*Botones de filtro en pc*/
-const btnListaPc = document.querySelector(".pc__list")
-btnListaPc.addEventListener("click" , e=>{
+const botonesNavPc = document.querySelector(".nav__pc")
+botonesNavPc.addEventListener("click" , e=>{
     filtroElegido(e.target.id) //se pasa el id del boton por parametro
 })
 
-
-const btnCarritoPc = document.getElementById("btnCarrito")
-btnCarritoPc.addEventListener("click" , e=>{
-    e.preventDefault()
-    limpiarInterfaz()
-
-    /*Estilos de los botones al mostrar*/
-    btnCarritoPc.classList.add("paginaElegida")
-    document.querySelector(".container__main").style.display ="none"
-    document.querySelector(".container__mainCarrito").style.display ="block"
-})
-
-
-const btnVaciarCarritoPc = document.getElementById("btnVaciarCarrito")
-btnVaciarCarritoPc.addEventListener("click" , e =>{
-    e.preventDefault()
-
-})
 
 const btnCarritoMovil = document.getElementById("btnCarritoMov")
 btnCarritoMovil.addEventListener("click" , e=>{
     e.preventDefault()
     limpiarInterfaz()
+    filtroElegido("btnCarrito")
 
     /*Estilos de los botones al mostrar*/
-    btnCarritoPc.classList.add("paginaElegida")
+    btnCarritoMovil.classList.add("paginaElegida")
     document.querySelector(".container__main").style.display ="none"
     document.querySelector(".container__mainCarrito").style.display ="block"
 })

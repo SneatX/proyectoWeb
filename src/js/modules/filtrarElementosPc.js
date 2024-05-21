@@ -1,7 +1,10 @@
 import { MyItem } from "../components/my-item"
-import { getAllAbrigos, getAllCamisetas, getAllPantalones, getAllCarrito } from "./untils/apiService";
+import { MycartItem } from "../components/my-cartItem";
+import { getAllAbrigos, getAllCamisetas, getAllPantalones, getAllCarrito, getClotheByCodeAndType } from "./untils/apiService";
 
-customElements.define('my-item', MyItem);
+customElements.define("my-item", MyItem);
+customElements.define("my-cart-item", MycartItem)
+
 let articlePrductos = document.querySelector(".main__products")
 
 export async function mostrarTodos(){
@@ -29,4 +32,24 @@ export async function mostrarPantalones(){
     data.forEach(articulo => {
         articlePrductos.innerHTML += `<my-item src="${articulo.imagen}" title="${articulo.nombre}" price="${articulo.precio}"></my-item>`
     });
+}
+
+export async function mostrarCarrito(){
+    let data = await getAllCarrito()
+
+    data.forEach(async articulo =>{
+        if("abrigoId" in articulo){
+            let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.abrigoId, "abrigo")
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+        }
+        else if("pantalonId" in articulo){
+            let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.pantalonId, "pantalon")
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+        }
+
+        else if("camisetaId" in articulo){
+            let [{nombre, imagen, precio}] = await getClotheByCodeAndType(articulo.camisetaId, "camiseta")
+            document.querySelector(".main__carrito").innerHTML += `<my-cart-item src="${imagen}" title="${nombre}" cant="${articulo.cantidad}" priceU="${precio}" totalPrice="${precio * articulo.cantidad}"></my-cart-item>`
+        }
+    })
 }
