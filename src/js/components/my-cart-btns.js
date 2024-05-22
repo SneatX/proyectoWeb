@@ -160,7 +160,7 @@ export class MyCartBtns extends LitElement{
     }
     async _VaciarCarrito(){
         this.eliminarContentCarrito()
-        toastr.error('Contenido del carrito vaciado', 'Éxito');
+        toastr.error('Contenido del carrito vaciado', 'Que pena');
         const element = document.querySelector(".main__carrito")
         element.innerHTML = "<h2 class='msjVacio'>No hay elementos en el carrito :c</h2>"
     }
@@ -168,6 +168,8 @@ export class MyCartBtns extends LitElement{
     async _RealizarCompra(){
         this.eliminarContentCarrito()
         toastr.success('Productos adquiridos', 'Éxito');
+        const element = document.querySelector(".main__carrito")
+        element.innerHTML = "<h2 class='msjVacio'>No hay elementos en el carrito :c</h2>"
     }
 
     async calcularTotalCarrito(){
