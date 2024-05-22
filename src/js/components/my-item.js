@@ -183,7 +183,14 @@ static styles =css`
             }
             await fetch(`http://localhost:3000/carrito/`, config)
         }
+        await this.updateTotalCarrito();
+    }
 
+    async updateTotalCarrito() {
+        const carritoTotalElement = document.querySelector("my-cart-btns");
+        if (carritoTotalElement) {
+            await carritoTotalElement.calcularTotalCarrito();
+        }
     }
 
 }

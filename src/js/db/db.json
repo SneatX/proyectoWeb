@@ -97,33 +97,8 @@
   ],
   "carrito": [
     {
-      "id": "4051",
-      "abrigoId": "1",
-      "cantidad": 1
-    },
-    {
-      "id": "4592",
-      "abrigoId": "2",
-      "cantidad": 1
-    },
-    {
-      "id": "abda",
-      "abrigoId": "5",
-      "cantidad": 1
-    },
-    {
-      "id": "548d",
-      "camisetaId": "2",
-      "cantidad": 1
-    },
-    {
-      "id": "de5b",
-      "pantalonId": "2",
-      "cantidad": 1
-    },
-    {
-      "id": "8d34",
-      "pantalonId": "3",
+      "id": "5271",
+      "pantalonId": "1",
       "cantidad": 1
     }
   ]

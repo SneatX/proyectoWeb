@@ -211,6 +211,14 @@ export class MycartItem extends LitElement{
             })
             document.getElementById("btnCarrito").click()
         }
+        await this.updateTotalCarrito();
+    }
+    async updateTotalCarrito() {
+        const carritoTotalElement = document.querySelector("my-cart-btns");
+        if (carritoTotalElement) {
+            await carritoTotalElement.calcularTotalCarrito();
+        }
     }
 }
+
 

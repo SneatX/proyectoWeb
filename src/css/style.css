@@ -266,7 +266,6 @@ nav {
     padding: 5px;
 }
 
-
 .btnVaciarCarrito:hover {
     cursor: pointer;
     background-color: var(--color-two);
@@ -479,7 +478,8 @@ nav {
 
     .mainCarrito__content{
         height: 75vh;
-        overflow-y: scroll;
+        overflow-y: auto;
+
     }
 
     .main__carrito {
