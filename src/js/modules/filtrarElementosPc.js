@@ -2,6 +2,7 @@ import { MyItem } from "../components/my-item"
 import { MycartItem } from "../components/my-cartItem";
 import { MyCartBtns } from "../components/my-cart-btns";
 import { getAllAbrigos, getAllCamisetas, getAllPantalones, getAllCarrito, getClotheByCodeAndType } from "./untils/apiService";
+import { calcularCantidadCarrito } from "./ui/cantidadCarrito";
 
 customElements.define("my-item", MyItem);
 customElements.define("my-cart-item", MycartItem)
@@ -38,10 +39,12 @@ export async function mostrarPantalones(){
 
 export async function mostrarCarrito(){
     let data = await getAllCarrito()
+    calcularCantidadCarrito()
 
     //Agregar botones del carrito una sola vez
     let carritoContainer = document.querySelector(".container__mainCarrito")
     if(!carritoContainer.querySelector("my-cart-btns")) carritoContainer.innerHTML += `<my-cart-btns></my-cart-btns>`
+
 
     data.forEach(async articulo =>{
         if("abrigoId" in articulo){

@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { getAllCarrito, getClotheByCodeAndType } from "../modules/untils/apiService";
+import { calcularCantidadCarrito } from "../modules/ui/cantidadCarrito";
 
 export class MyCartBtns extends LitElement{
     
@@ -155,6 +156,7 @@ export class MyCartBtns extends LitElement{
         })
         contenedorItems.innerHTML= ""
         await this.calcularTotalCarrito()
+        calcularCantidadCarrito()
     }
 
     async calcularTotalCarrito(){

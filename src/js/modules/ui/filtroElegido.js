@@ -40,6 +40,7 @@ export const filtroElegidoPc = (cod)=>{
             document.querySelector(".main__carrito").innerHTML = ""
             document.querySelector(".container__main").style.display ="none"
             document.querySelector(".container__mainCarrito").style.display ="block"
+
     }
 }
 
