@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit"
 import { getAllCarrito } from "../modules/untils/apiService";
+import { calcularCantidadCarrito } from "../modules/ui/cantidadCarrito";
 
 export class MyItem extends LitElement{
     static properties = {
@@ -184,6 +185,7 @@ static styles =css`
             await fetch(`http://localhost:3000/carrito/`, config)
         }
         await this.updateTotalCarrito();
+        calcularCantidadCarrito()
     }
 
     async updateTotalCarrito() {

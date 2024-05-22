@@ -1,6 +1,7 @@
 import { desplegarBarra } from "./modules/navBar.js";
 import { limpiarInterfaz} from "./modules/ui/limpiarInterfaz.js"
 import { filtroElegido } from "./modules/ui/filtroElegido.js";
+import { calcularCantidadCarrito } from "./modules/ui/cantidadCarrito.js";
 
 /*Barra desplegable*/
 const btnDesplegar = document.getElementById('btnDesplegarMenu');
@@ -10,6 +11,7 @@ btnDesplegar.addEventListener('click', desplegarBarra);
 document.addEventListener("DOMContentLoaded" , e =>{
     e.preventDefault()
     filtroElegido("mostrarTodosPc")
+    calcularCantidadCarrito()
 })
 
 /*Botones de filtro en pc*/

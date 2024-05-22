@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-
+import { calcularCantidadCarrito } from "../modules/ui/cantidadCarrito";
 
 export class MycartItem extends LitElement{
     static properties = {
@@ -212,6 +212,7 @@ export class MycartItem extends LitElement{
             document.getElementById("btnCarrito").click()
         }
         await this.updateTotalCarrito();
+        calcularCantidadCarrito()
     }
     async updateTotalCarrito() {
         const carritoTotalElement = document.querySelector("my-cart-btns");
