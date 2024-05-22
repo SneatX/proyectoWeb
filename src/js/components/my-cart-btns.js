@@ -161,6 +161,8 @@ export class MyCartBtns extends LitElement{
     async _VaciarCarrito(){
         this.eliminarContentCarrito()
         toastr.error('Contenido del carrito vaciado', 'Éxito');
+        const element = document.querySelector(".main__carrito")
+        element.innerHTML = "<h2 class='msjVacio'>No hay elementos en el carrito :c</h2>"
     }
 
     async _RealizarCompra(){
