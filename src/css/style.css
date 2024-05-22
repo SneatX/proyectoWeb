@@ -8,6 +8,9 @@
     font-family: "Gugi", sans-serif;
 }
 
+.toast {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(119, 0, 0, 0.25) !important;
+}
 
 body {
     background: url(../../img/fondo.png);

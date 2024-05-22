@@ -186,6 +186,7 @@ static styles =css`
         }
         await this.updateTotalCarrito();
         calcularCantidadCarrito()
+        toastr.info('Producto agregado al carrito', '¡Eso es!');
     }
 
     async updateTotalCarrito() {

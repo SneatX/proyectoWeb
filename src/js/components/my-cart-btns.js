@@ -140,13 +140,13 @@ export class MyCartBtns extends LitElement{
                     <h2>Total</h2>
                     <h2>$ ${this.totalCarrito}</h2>
                 </div>
-                <button class="btnComprar">Comprar</button>
+                <button @click="${this._RealizarCompra}" class="btnComprar">Comprar</button>
             </div>
         </div>
         `
     }
 
-    async _VaciarCarrito(){
+    async eliminarContentCarrito(){
         const contenedorItems = document.querySelector(".main__carrito")
         let data = await getAllCarrito()
         data.forEach(async prenda => {
@@ -157,6 +157,15 @@ export class MyCartBtns extends LitElement{
         contenedorItems.innerHTML= ""
         await this.calcularTotalCarrito()
         calcularCantidadCarrito()
+    }
+    async _VaciarCarrito(){
+        this.eliminarContentCarrito()
+        toastr.error('Contenido del carrito vaciado', 'Éxito');
+    }
+
+    async _RealizarCompra(){
+        this.eliminarContentCarrito()
+        toastr.success('Productos adquiridos', 'Éxito');
     }
 
     async calcularTotalCarrito(){

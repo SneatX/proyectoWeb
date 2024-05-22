@@ -213,6 +213,7 @@ export class MycartItem extends LitElement{
         }
         await this.updateTotalCarrito();
         calcularCantidadCarrito()
+        toastr.warning('Producto eliminado al carrito', 'Es una lastima');
     }
     async updateTotalCarrito() {
         const carritoTotalElement = document.querySelector("my-cart-btns");
