@@ -108,7 +108,7 @@ export class MycartItem extends LitElement{
                 1px -1px 0 white,
                 -1px 1px 0 white,
                 1px 1px 0 white;
-            width: 100%;
+            width: 98%;
             height: 200px;
             gap: 0 25px;
         }
